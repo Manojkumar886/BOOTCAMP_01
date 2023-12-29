@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+</head>
+<body bgcolor="aqua">
+    <form align="center">
+        <h1><font color="red"><ins>Student Details</ins></font></h1>
+        <br>
+        <label>NAME : </label>
+        <input type="text" placeholder="enter your name" required />
+        <input type="image" src="HTML/images/salem_wiki.jpg" height="48" width="48" />
+        <br>
+        <br>
+        <label>AGE :</label>
+        <input type="number" placeholder="enter only 0 to 100"/>
+        <br>
+        <br>
+        <label>GENDER</label>
+        <input type="radio" name="gender"> MALE
+        <input type="radio" name="gender" checked>FEMALE
+        <input type="radio" name="gender">OTHER
+        <br>
+        <br>-
+        <label>GMAIL</label>
+        <input type="email" />
+        <br>
+        <br>
+        <label>DATE OF BIRTH</label>
+        <input type="date" >
+        <br>
+        <br>
+        <h1><font color="red"><ins>Educational Details</ins></font></h1>
+        <br>
+        <br>
+        <label>DEPARTMENT</label>
+        <select>
+            <option selected hidden>SELECT ANY ONE</option>
+            <option selected>ARTS</option>
+            <option>ENGINEERING</option>
+            <option>MEDICAL</option>
+        </select>
+        <br>
+        <br>
+        <label>HOBBIES</label>
+        <input type="checkbox" >BOOKS READING
+        <input type="checkbox" > DRAWING
+        <input type="checkbox" checked> POLITICAL
+        <br>
+        <br>
+        <label>CGPA :</label>
+        <meter min="0" max="10" value="2"></meter>
+        <br>
+        <br>
+        <h1><font color="red"><ins>ADDRESS</ins></font></h1>
+        <label>address</label>
+        <textarea></textarea>
+        <br>
+        <br>
+        <label>PASSWORD</label>
+        <input type="password" />
+        <br>
+        <br>
+        <label>RESUME</label>
+        <input type="file" />
+        <br>
+        <br>
+        <button type="submit">SUBMIT</button>
+        <button type="reset">CANCEL</button>
+    </form>
+</body>
+</html>
