@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex</title>
+    <style>
+        .mybox
+        {
+            background-color: wheat;
+            height: 400px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+           flex-wrap: wrap;
+        }
+        .box{
+            background-color: yellowgreen;
+            width: 200px;
+            height: 150px;
+            border: 2px solid whitesmoke;
+        }
+        .box1:hover
+        {
+            background-color: blue;   
+            box-shadow: 0px 0px 15px blueviolet;
+            cursor: pointer;
+        }
+        input:active
+        {
+            padding: 40px;
+            color: palevioletred;
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+    <div class="mybox">
+        <div class="box box1 "></div>
+        <div class="box box2"></div>
+        <div class="box box3"></div>
+        <div class="box box4"></div>
+    </div>
+    
+    <input type="text" />
+</body>
+</html>

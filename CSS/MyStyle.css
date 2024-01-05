@@ -4,6 +4,7 @@ input{
 }
 
 table{
+    color: black;
     /* border-collapse: collapse; */
     width: 1100px;
     height: 900px;
@@ -15,16 +16,16 @@ table{
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    /* background-color: beige; */
-    /* background-image: linear-gradient(190deg,red,rgb(2, 2, 85)); */
-    color: rgb(113, 67, 67);
-    background-image: url(../HTML/images/schedule.png);
+    /* /* background-image: linear-gradient(190deg,red,rgb(2, 2, 85)); */
+    background-image: url(../HTML/images/salem_wiki.jpg);
     background-repeat: no-repeat;
     background-position:center;
     background-size: cover;
-    -webkit-filter: drop-shadow(10%);
-    filter: drop-shadow(10%);
+    -webkit-filter: opacity(30%);
+    filter: opacity(30%);
     background-attachment: scroll;
+    font-family: monospace;
+    font-size: xx-large;
     /* background-blend-mode: lighten; */
     
 }
