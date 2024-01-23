@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Function</title>
+</head>
+<body>
+        <script>
+            // Array Creation
+            // let fruitsname = ["Apple","Banana","mango","Strawberry","Gooseberry"];
+            //or
+            let carbrands=new Array() ;
+
+            // PUSH -ADD A ELEMENT IN LAST INDEX
+            carbrands.push("BMW");
+            carbrands.push("AUDI");
+            carbrands.push("BENTELY");
+            carbrands.push("SUZUKI");
+            carbrands.push("FERRARI");
+            
+            // UNSHITFT -ADD A ELEMENT IN FIRST INDEX
+            carbrands.unshift("TATA");
+
+            // POP- DELETE A ELEMENT IN LAST INDEX
+            // carbrands.pop();
+
+            // SHIFT -DELETE A ELEMENT IN FIRST INDEX
+            // carbrands.shift();
+
+            // carbrands.delete([5]);
+
+            // document.write(carbrands+"<br/>");
+            
+
+            // SORT
+            carbrands.sort();
+
+            // REVERSE
+            carbrands.reverse();
+            
+            // AT(position) 
+            // alert(carbrands.at(5));
+
+            // LENGTH
+            alert(carbrands.length)
+
+            // MAP- ONE BY ONE GET A YOUR VALUES
+            carbrands.map(getting);
+            function getting(temp)
+            {
+                document.write("<b>"+temp+"</b>"+ "<br>");
+            }
+
+            // looping
+            // for(let a=0;a<carbrands.length;a++)
+            // {
+            //     document.write("<b>"+carbrands[a]+"</b>"+ "<br>");
+            // }
+
+        </script>
+</body>
+</html>
