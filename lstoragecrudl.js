@@ -48,6 +48,7 @@ function showData() {
         html += "<td>" + element.age + "</td>";
         html += "<td>" + element.address + "</td>";
         html += "<td>" + element.email + "</td>";
+        html += '<td> <button onclick="deleteData(' + index + ')">DELETE</button><button onclick="updateData(' + index + ')">EDIT</button></td>'
         html += "</tr>";
     })
     document.querySelector('#crudTable tbody').innerHTML = html;
@@ -89,4 +90,61 @@ function addData() {
         document.getElementById("email").value = "";
 
     }
+}
+
+
+
+function deleteData(index) {
+    let StudentList;
+    if (localStorage.getItem("peopleList") == null) {
+        StudentList = [];
+    }
+    else {
+        StudentList = JSON.parse(localStorage.getItem("peopleList"));
+    }
+
+    StudentList.splice(index, 1);
+
+    localStorage.setItem("peopleList", JSON.stringify(StudentList));
+
+    showData();
+    document.getElementById("name").value = "";
+    document.getElementById("age").value = "";
+    document.getElementById("address").value = "";
+    document.getElementById("email").value = "";
+
+}
+
+let updateData = (pos) => {
+    document.getElementById("Submit").style.display = 'none';
+    document.getElementById("Update").style.display = 'block'
+
+    let StudentList;
+    if (localStorage.getItem("peopleList") == null) {
+        StudentList = [];
+    }
+    else {
+        StudentList = JSON.parse(localStorage.getItem("peopleList"));
+    }
+
+    document.getElementById("name").value = StudentList[pos].name;
+    document.getElementById("age").value = StudentList[pos].age;
+    document.getElementById("address").value = StudentList[pos].address;
+    document.getElementById("email").value = StudentList[pos].email;
+
+    document.getElementById("Update").onclick = function () {
+        StudentList[pos].name = document.getElementById("name").value;
+        StudentList[pos].age = document.getElementById("age").value;
+        StudentList[pos].address = document.getElementById("address").value;
+        StudentList[pos].email = document.getElementById("email").value;
+
+        localStorage.setItem("peopleList", JSON.stringify(StudentList));
+        showData();
+        document.getElementById("name").value = "";
+        document.getElementById("age").value = "";
+        document.getElementById("address").value = "";
+        document.getElementById("email").value = "";
+
+    }
+
 }
