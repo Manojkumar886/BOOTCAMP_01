@@ -5,12 +5,16 @@ function validationForm() {
     var address = document.getElementById("address").value;
     var email = document.getElementById("email").value;
 
-    if (name == "") {
-        alert(" name is required");
+    if (name.length <= 0) {
+        document.getElementById("name1").innerHTML = "your name should't empty"
+        return false;
+    }
+    else if (!(/^[a-z A-z]$/).test(name)) {
+        document.getElementById("name1").innerHTML = "your name should be used only alphabets"
         return false;
     }
 
-    if (age == "") {
+    if (age == ""=) {
         alert(" age is Required");
         return false;
     }
@@ -118,15 +122,7 @@ function deleteData(index) {
 let updateData = (pos) => {
     document.getElementById("Submit").style.display = 'none';
     document.getElementById("Update").style.display = 'block'
-
-    let StudentList;
-    if (localStorage.getItem("peopleList") == null) {
-        StudentList = [];
-    }
-    else {
-        StudentList = JSON.parse(localStorage.getItem("peopleList"));
-    }
-
+    Q
     document.getElementById("name").value = StudentList[pos].name;
     document.getElementById("age").value = StudentList[pos].age;
     document.getElementById("address").value = StudentList[pos].address;
